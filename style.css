@@ -1,0 +1,401 @@
+/*
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&family=Cinzel+Decorative&family=Dai+Banna+SIL:ital,wght@1,300&family=Faster+One&family=Foldit&family=Moirai+One&family=Nabla&family=Poppins:wght@100&family=Tapestry&family=Ysabeau+SC&family=Ysabeau:ital,wght@1,200&display=swap" rel="stylesheet">
+
+
+font-family: 'Bodoni Moda', serif;
+font-family: 'Cinzel Decorative', cursive;
+font-family: 'Dai Banna SIL', serif;
+font-family: 'Faster One', cursive;
+font-family: 'Foldit', cursive;
+font-family: 'Moirai One', cursive;
+font-family: 'Nabla', cursive;
+font-family: 'Poppins', sans-serif;
+font-family: 'Tapestry', cursive;
+font-family: 'Ysabeau', sans-serif;
+font-family: 'Ysabeau SC', sans-serif;
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  height: 96vh;
+  background-color: black;
+}
+
+nav {
+  display: flex;
+  width: 84%;
+  margin-left: 8%;
+  margin-right: 8%;
+  padding: 20px;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  background-color: #252525;
+}
+
+nav p, #title {
+  /* font-family: "Moirai One", cursive; */
+  /* font-size: xx-large; */
+  font-family: "Cinzel Decorative", cursive;
+  color: aqua;
+  font-weight: bolder;
+  font-size: 50px;
+}
+
+#title{
+  text-align: center;
+}
+
+nav span {
+  /* font-family: "Moirai One", cursive; */
+  /* font-size: xx-large; */
+  font-family: "Tapestry", cursive;
+  padding-top: 2px;
+  color: aqua;
+  font-weight: lighter;
+  font-size: 25px;
+}
+
+.dropdown {
+  display: none;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 2.12vh;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: aqua;
+}
+
+/*msg*/
+.info {
+  /* margin-left: 8%;*/
+  margin-top: 10%;
+  text-align: center;
+}
+
+.info h1 {
+  font-size: 50px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.info p {
+  color: gray;
+  font-size: x-large;
+  /* font-family: "Ysabeau SC", sans-serif; */
+  font-family: "Dai Banna SIL", serif;
+  margin: 30px 0;
+}
+
+.info a {
+  text-decoration: none;
+  display: inline-block;
+  
+  text-align: center;
+  font-size: large;
+  font-weight: bolder;
+
+  margin: 10px 0;
+  padding-top: 12px;
+  border-radius: 15px;
+  border: 2px solid gray;
+  box-shadow: 2px 2px gray;
+
+  width: 180px;
+  height: 30px;
+
+  color: white;
+  /* transition: ease-out 0.3s; */
+  /* outline: none; */
+  background-color: transparent;
+
+  position: relative;
+  z-index: 1;
+}
+
+.info a:hover {
+  cursor: pointer;
+  color: black;
+}
+
+.info a:before {
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  opacity: 0;
+  content: "";
+  border-radius: 12px;
+  background-color: aqua;
+}
+
+.info a:hover:before{
+  transition: 0.5s all ease;
+  right: 0;
+  opacity: 1;
+  z-index: -1;
+}
+
+.info a:active {
+  box-shadow: none;
+  margin-top: 12px;
+  margin-left: 2px;
+}
+
+/* content */
+h1 {
+  font-family: "Cinzel Decorative", cursive;
+  color: aqua;
+  padding-top: 120px;
+  margin-bottom: 20px;
+}
+
+a{
+  text-decoration: none;
+  font-family: "Tapestry", cursive;
+  padding-top: 4px;
+  color: white;
+  font-size: x-large;
+}
+
+a:hover{
+  color: aqua;
+}
+
+#islam,#dua,#book,#art,#about {
+  width: 84%;
+  margin: 8%;
+  text-align: center;
+}
+
+form {
+  margin-top: 3%;
+  margin-left: 9%;
+}
+
+#name,
+#email {
+  width: 44.5%;
+  height: 35px;
+  margin-bottom: 15px;
+  padding-left: 15px;
+  border-radius: 15px;
+  background-color: #252525;
+  border: 2px solid #252525;
+  color: white;
+}
+
+#sub {
+  width: 92%;
+  height: 35px;
+  margin-bottom: 15px;
+  padding-left: 15px;
+  border-radius: 15px;
+  background-color: #252525;
+  border: 2px solid #252525;
+  color: white;
+}
+
+#msg {
+  width: 92%;
+  margin-bottom: 5px;
+  padding-left: 15px;
+  padding-top: 15px;
+  border-radius: 15px;
+  background-color: #252525;
+  border: 2px solid #252525;
+  color: white;
+}
+
+#name:hover,
+#email:hover,
+#sub:hover,
+#msg:hover {
+  border: 2px solid aqua;
+}
+
+#name,
+#email,
+#sub,
+#msg {
+  border: 2px solid #252525;
+  font-family: "Tapestry", cursive;
+  font-size: large;
+}
+
+#send1 {
+  text-align: center;
+  padding-top: 7px;
+  font-family: "Ysabeau SC", sans-serif;
+  font-weight: bold;
+  font-size: medium;
+
+  width: 145px;
+  height: 30px;
+
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-bottom: 27px;
+  border-radius: 15px;
+  box-shadow: 2px 2px rgb(88, 87, 87);
+
+  /* background-color: #252525; */
+  /* border: 2px solid orange; */
+  color: #252525;
+  background-color: transparent;
+  border: 2px solid rgb(88, 87, 87);
+
+  position: relative;
+  z-index: 1;
+}
+
+#send1:hover {
+  cursor: pointer;
+}
+
+#send1:before {
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  opacity: 0;
+  content: "";
+  border-radius: 12px;
+  background-color: white;
+}
+
+#send1:hover:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  z-index: -1;
+}
+
+#send1:active {
+  box-shadow: none;
+  margin-top: 2px;
+  margin-left: 2px;
+  margin-bottom: 25px;
+}
+
+footer {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  background-color: cornflowerblue;
+}
+
+footer p {
+  /* font-family: "Moirai One", cursive; */
+  /* font-size: xx-large; */
+  font-family: "Cinzel Decorative", cursive;
+  color: aqua;
+  font-weight: bolder;
+  font-size: 50px;
+}
+
+footer img {
+  margin: 5px;
+  width: 25px;
+}
+/* MEdia for navber */
+
+@media only screen and (max-width: 1500px) {
+  nav {
+    width: 90%;
+    margin-left: 3%;
+    margin-right: 6%;
+  }
+
+  .info {
+    text-align: center;
+    margin-top: 25%;
+  }
+
+  .images {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  nav {
+    width: 90%;
+    margin-left: 3%;
+    margin-right: 6%;
+  }
+
+  nav ul li {
+    display: none;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    color: blue;
+    margin: 2vh;
+    font-weight: bold;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: whitesmoke;
+    padding: 10px;
+    z-index: 1;
+    font-weight: bolder;
+  }
+
+  .manu {
+    padding-top: 20px;
+  }
+
+  .manu a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+
+  .manu a:hover {
+    color: blue;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .info {
+    text-align: center;
+    margin-top: 25%;
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-bottom: 0%;
+  }
+
+  .images {
+    display: none;
+  }
+}
